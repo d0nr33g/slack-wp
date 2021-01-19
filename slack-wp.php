@@ -95,7 +95,7 @@ function slack_wp_page_callback() {
     echo '<div style="margin-top: 50px;">';
     echo '<form action="'.admin_url( 'admin-post.php' ).'" method="post">';
     echo '<input type="hidden" name="action" value="slack_wp_form">';
-    echo '<label>Access Token: <input type="text" name="token" value="xoxb-1645078640917-1633418109319-LT0xJSQhqWrLCYfspw5ws87k"></label>';
+    echo '<label>Access Token: <input type="text" name="token" value=""></label>';
     echo '<input type="submit" value="List Channels" class="button action">';
     echo '</form>';
 
@@ -104,7 +104,7 @@ function slack_wp_page_callback() {
     if(!empty($_GET['token'])){
         echo '<input type="hidden" name="token" value="'.$_GET['token'].'">';
     }else{
-        echo '<input type="hidden" name="token" value="xoxb-1645078640917-1633418109319-LT0xJSQhqWrLCYfspw5ws87k">';
+        echo '<input type="hidden" name="token" value="">';
     }
     echo '<label>Add Channel: <input type="text" name="ch_name" placeholder="Channel Name"></label>';
     echo '<input type="submit" value="Create" class="button action">';
